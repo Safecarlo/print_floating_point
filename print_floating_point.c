@@ -106,8 +106,8 @@ int main(int argc, char **argv)
       // Print
       printf("decimal                   : %f\n", _c.f);
       printf("scientific                : %e\n", _c.f);
-      printf("hexadicimal floating point: %a\n", _c.f);
-      printf("hexadecimal integer       : %x\n", _c.u);
+      printf("hexadecimal floating point: %a\n", _c.f);
+      printf("hexadecimal integer       : 0x%x\n", _c.u);
       printf("binary                    : ");
       printf_f2b(_c);
       printf("\n");
@@ -125,8 +125,8 @@ int main(int argc, char **argv)
       // Print
       printf("decimal                   : %f\n", _c.d);
       printf("scientific                : %e\n", _c.d);
-      printf("hexadicimal floating point: %a\n", _c.d);
-      printf("hexadecimal integer       : %lx\n", _c.u);
+      printf("hexadecimal floating point: %a\n", _c.d);
+      printf("hexadecimal integer       : 0x%lx\n", _c.u);
       printf("binary                    : ");
       printf_d2b(_c);
       printf("\n");
