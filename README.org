@@ -1,0 +1,48 @@
+#+TITLE: A simple visualisation of floating point value using verificarlo
+#+AUTHOR: Sholde
+#+DATE: May 2021
+
+* Installation
+
+  #+BEGIN_SRC shell
+    $ git clone https://github.com/Safecarlo/print_floating_point.git
+    $ cd print_floating_point
+    $ make
+  #+END_SRC
+
+* Usage
+
+  #+BEGIN_SRC shell
+    $ ./print_floating_point [TYPE] [FLOAT]
+  #+END_SRC
+  
+** Exemple with the backend IEEE
+
+  #+BEGIN_SRC shell
+    $ VFC_BACKENDS="libinterflop_ieee.so" ./print_floating_point float 5.9
+    decimal                   : 5.900000
+    scientific                : 5.900000e+00
+    hexadicimal floating point: 0x1.79999ap+2
+    hexadecimal integer       : 40bccccd
+    binary                    : 0 10000001 01111001100110011001101
+  #+END_SRC
+
+  #+BEGIN_SRC shell
+    $ VFC_BACKENDS="libinterflop_ieee.so" ./print_floating_point double 5.9
+    decimal                   : 5.900000
+    scientific                : 5.900000e+00
+    hexadicimal floating point: 0x1.799999999999ap+2
+    hexadecimal integer       : 401799999999999a
+    binary                    : 0 10000000 00101111001100110011001
+  #+END_SRC
+
+** Example with the backend VPREC and custom range and precision
+
+  #+BEGIN_SRC shell
+    $ VFC_BACKENDS="libinterflop_vprec.so --range-binary32=2 --precision-binary32=3" ./print_floating_point float 1.25
+    decimal                   : 1.250000
+    scientific                : 1.250000e+00
+    hexadicimal floating point: 0x1.4p+0
+    hexadecimal integer       : 3fa00000
+    binary                    : 0 01111111 01000000000000000000000
+  #+END_SRC
