@@ -33,7 +33,7 @@
     scientific                : 5.900000e+00
     hexadecimal floating point: 0x1.799999999999ap+2
     hexadecimal integer       : 0x401799999999999a
-    binary                    : 0 10000000 00101111001100110011001
+    binary                    : 0 10000000001 01111001100110011001100110011001100110011001100110100
   #+END_SRC
 
 ** Example with the backend VPREC and custom range and precision

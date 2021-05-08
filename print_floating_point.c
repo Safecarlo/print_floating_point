@@ -45,8 +45,8 @@ void printf_f2b(f2u _c)
 
 // double constant
 #define SIZE_64 64
-#define RANGE_64 8
-#define PRECISION_64 23
+#define RANGE_64 11
+#define PRECISION_64 53
 
 //
 typedef uint64_t u64;
