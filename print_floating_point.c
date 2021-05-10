@@ -46,7 +46,7 @@ void printf_f2b(f2u _c)
 // double constant
 #define SIZE_64 64
 #define RANGE_64 11
-#define PRECISION_64 53
+#define PRECISION_64 52
 
 //
 typedef uint64_t u64;
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 {
   // Check input
   if (argc != 3)
-    return printf("Usage: %s [TYPE] [FLOAT]\n", argv[0]), 1;
+    return printf("Usage: %s [TYPE] [FLOATING POINT NUMBER]\n", argv[0]), 1;
 
   // Type
   char *type = argv[1];
@@ -134,6 +134,7 @@ int main(int argc, char **argv)
   else // others
     {
       printf("Bad type %s\n", type);
+      printf("Expected float or double\n");
       return 1;
     }
 
